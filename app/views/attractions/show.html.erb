@@ -1,0 +1,6 @@
+<h2><%= @attraction.name %></h2>
+<h3>Ticket Requirement: <%= @attraction.tickets %></h3>
+<h3>Nausea Ratin: <%= @attraction.nausea_rating %></h3>
+<h3>Happiness Rating: <%= @attraction.happiness_rating %></h3>
+<h3>Height Requirement: <%= @attraction.min_height %></h3><br>
+<%= button_to 'Go on this ride', user_path %>
