@@ -17,7 +17,20 @@ class AttractionsController < ApplicationController
         if @attraction.save
             redirect_to attraction_path(@attraction)
         else
-           redirect_to attractions_path 
+           redirect_to new_attraction_path 
+        end
+    end
+    
+    def edit
+        @attraction = Attraction.find(params[:id])
+    end
+    
+    def update
+        @attraction = Attraction.find(params[:id])
+        if @attraction.update(attraction_params)
+            redirect_to attraction_path(@attraction)
+        else
+            render :edit
         end
     end
     
